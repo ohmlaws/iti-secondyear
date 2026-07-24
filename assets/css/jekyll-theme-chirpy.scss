@@ -108,7 +108,7 @@ margin: 2px !important;
     .code-header button {display: none}
     div[class^=language-] .code-header::before {display: none !important}
     .post-navigation {display: none !important}
-    div[onclick^="checkAnswer"], .content p:not(:has(img)), .footer-center, .footer-right {display: none;}
+    div[onclick^="checkAnswer"], .footer-center, .footer-right {display: none;}
     footer {margin-top: 0px !important}
     /* 1. HIDE THE RIGHT SIDEBAR/PANEL (Keep this from before) */
     #panel-wrapper, 
@@ -139,7 +139,7 @@ margin: 2px !important;
     main {
         /* Points (pt) are the standard unit for physical print */
         font-size: 8pt !important; 
-        line-height: 0.5 !important;
+        line-height: 1 !important;
     }
 
     h1 { font-size: 14pt !important; }
