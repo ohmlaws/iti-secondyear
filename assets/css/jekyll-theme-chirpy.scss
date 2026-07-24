@@ -61,25 +61,11 @@ margin: 2px !important;
     margin: 0 !important;
     padding: 0 !important;
 }
-/* Hide the date on individual post pages */
-.post-meta span:has(time) {
+/* Hide the calendar icon and date */
+.post-meta span:has(time), .post-meta .fa-calendar, .post-meta time, .card-body time {
     display: none !important;
 }
 
-/* Hide the date on the homepage feed and lists */
-.post-meta time {
-    display: none !important;
-}
-
-/* Hide the calendar icon */
-.post-meta .fa-calendar {
-    display: none !important;
-}
-
-/* Hide date on Further Reading area */
-.card-body time {
-    display: none !important;
-}
 #post-list .card .card-body .post-meta i:not(:first-child) {
     margin-left: 0 !important;
 }
@@ -90,42 +76,32 @@ margin: 2px !important;
 }
 /* --- Print Mode, remove unnecessary and annoying elements for printing  --- */
 @media print {
-    #topbar-wrapper {display: none}
-    main {padding: 0px}
-    main h1 {margin-top: 0px}  
-    #sidebar {display: none !important;}   
-    .post-tail-wrapper {margin-top: 10px}
-    .mt-3, .readtime {display: none}    
-    #toc-bar {
-        display: none !important;
-        height: 0 !important;
-    }    
-    .toc-trigger {display: none;}    
-    #back-to-top {display: none}
-    #search-highlight-nav {display: none !important;}
-    #related-posts {display: none}
-    .share-wrapper {display: none !important}
-    .code-header button {display: none}
-    div[class^=language-] .code-header::before {display: none !important}
-    .post-navigation {display: none !important}
-    div[onclick^="checkAnswer"], br, .footer-center, .footer-right {display: none;}
-    footer {margin-top: 0px !important}
-    /* 1. HIDE THE RIGHT SIDEBAR/PANEL (Keep this from before) */
-    #panel-wrapper, 
-    aside {display: none !important;}
-    /* 2. FORCE ALL CONTAINERS AND COLUMNS TO 100% WIDTH */
+    /* HIDDEN ELEMENTS */
+    #topbar-wrapper, #sidebar, div.mt-3.mb-3, .readtime, #toc-bar, .toc-trigger, #back-to-top, #search-highlight-nav, #related-posts, .share-wrapper, .code-header button, div[class^=language-] .code-header::before, .post-navigation, div[onclick^="checkAnswer"], br, .footer-center, .footer-right, #panel-wrapper, aside { 
+        display: none !important; 
+    }
+
+    /* SPACING AND HEIGHT ADJUSTMENTS */
+    main { padding: 0px; }
+    main h1 { margin-top: 0px; }  
+    .post-tail-wrapper { margin-top: 10px; }
+    #toc-bar { height: 0 !important; }
+    footer { margin-top: 0px !important; }
+
+    /* FORCE ALL CONTAINERS AND COLUMNS TO 100% WIDTH */
     .container,
     #main-wrapper,
     #core-wrapper, 
     .row,
-    #main-wrapper .row > div { /* Targets the Bootstrap column classes */
+    #main-wrapper .row > div { 
         width: 100% !important;
         max-width: 100% !important;
-        flex: none !important; /* Removes flexbox sizing constraints */
+        flex: none !important; 
         display: block !important; 
         margin: 0 !important;
         padding: 0 !important;
     }
+    
     /* Ensure the article content itself isn't restricted */
     article, 
     .post-content {
@@ -133,26 +109,26 @@ margin: 2px !important;
         max-width: 100% !important;
     }
       
+    /* TYPOGRAPHY AND COLORS FOR PRINT */
     body, 
     article, 
     .post-content,
     main {
-        /* Points (pt) are the standard unit for physical print */
+        color: #000;
         font-size: 8pt !important; 
         line-height: 1 !important;
     }
 
-    h1 { font-size: 14pt !important; }
-    h2 { font-size: 12pt !important; }
-    h3 { font-size: 12pt !important; }
+    h1 { color: #000; font-size: 14pt !important; }
+    h2 { color: #000; font-size: 12pt !important; }
+    h3 { color: #000; font-size: 12pt !important; }
     
+    /* IMAGES */
     img, 
     .post-content img {
-        /* Prevents images from spanning the entire width of the paper */
         max-width: 50% !important; 
         height: auto !important; 
-        display: block !important;      
-        /* Prevents the printer from cutting an image in half across two pages */
+        display: block !important;
         page-break-inside: avoid !important; 
         break-inside: avoid !important; 
     }
