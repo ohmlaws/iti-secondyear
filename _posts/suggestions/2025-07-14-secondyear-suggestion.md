@@ -1,7 +1,7 @@
 ---
-title: "Second Year Suggestion"
+title: "ITI Second Year Suggestion"
 description: >-
- Second Year Suggestion book, Theory, WCS, Drawing, Emp Skills
+ ITI Second Year Suggestion book, Theory, WCS, Drawing, Emp Skills
 date: 2025-07-14 16:25:00 +0530
 categories: [2nd year]
 tags: [ITI]
@@ -10,7 +10,7 @@ image:
   path: /assets/img/banner/secondyear-suggestions.png
 ---
 <p>
-    <a href="https://raw.githubusercontent.com/ohmlaws/secondyear/master/assets/pdf/iti-secondyear-suggestion.pdf"
+    <a href="https://raw.githubusercontent.com/ohmlaws/iti-secondyear/master/assets/pdf/iti-secondyear-suggestion.pdf"
   style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
   Download PDF
     </a>
@@ -19,7 +19,7 @@ image:
   
      
    <iframe 
-    src="https://docs.google.com/viewer?url=https://ohmlaws.github.io/secondyear/assets/pdf/iti-secondyear-suggestion.pdf&embedded=true" 
+    src="https://docs.google.com/viewer?url=https://ohmlaws.github.io/iti-secondyear/assets/pdf/iti-secondyear-suggestion.pdf&embedded=true" 
     width="100%" 
     height="800px" 
     style="border: none;">
